@@ -2,16 +2,16 @@ require_relative 'entry'
 
 class AddressBook
 	attr_accessor (:entries)
-	
+
 	def initialize
 		@entries = []
 	end
 
 	def add_entry(name, phone_number, email)
 		index = 0
-		
+
 		@entries.each do |entry|
-		
+
 			if name < entry.name
 				break
 			end
@@ -23,7 +23,7 @@ class AddressBook
 
 	def remove_entry(name, phone_number, email)
 		@entries.each do |entry|
-			if (name == entry.name) && (phone_number == entry.phone_number) && (email == entry.email) 
+			if (name == entry.name) && (phone_number == entry.phone_number) && (email == entry.email)
 				@entries.delete(entry)
 				break
 			end
