@@ -55,7 +55,6 @@ class AddressBook
 					upper = mid - 1
 				elsif name > mid_name
 					lower = mid + 1
-				end
 			end
 		end
 
