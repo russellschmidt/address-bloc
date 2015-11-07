@@ -55,12 +55,6 @@ class MenuController
     end
   end
 
-  def view_all_entries
-  end
-
-  def create_entry
-  end
-
   def search_entries
     print "Search by name: "
     name = gets.chomp
@@ -88,7 +82,6 @@ class MenuController
       main_menu
     when "e"
       edit_entry(entry)
-      system "clear"
       main_menu
     when "m"
       system "clear"
@@ -99,9 +92,6 @@ class MenuController
       puts entry.to_s
       search_submenu(entry)
     end
-  end
-
-  def read_csv
   end
 
   def create_entry
@@ -217,6 +207,7 @@ class MenuController
     entry.name = name if !name.empty?
     entry.phone_number = phone_number if !phone_number.empty?
     entry.email = email if !email.empty?
+    system "clear"
 
     puts "Updated entry: "
     puts entry
